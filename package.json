@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server",
     "dev": "nodemon server"
   },
@@ -12,7 +12,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/session": "^6.2.2",
+    "bcrypt": "^5.0.1",
     "fastify": "^3.23.1",
+    "fastify-cookie": "^5.4.0",
+    "fastify-session": "^5.2.1",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "jest": "^27.4.3",
+    "pino-pretty": "^7.2.0"
   }
 }

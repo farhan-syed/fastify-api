@@ -1,8 +1,13 @@
-// require framework and instantiate
-const fastify = require('fastify')({ logger: true })
-
-// register plugin
-fastify.register(require('./routes/users.js'))
+const fastify = require("./fastify")({
+  logger: {
+    prettyPrint: {
+      translateTime: true,
+      ignore: 'pid,hostname,reqId,responseTime,req,res',
+      messageFormat: '{msg} [id={reqId} {req.method} {req.url}]',
+      colorize: true,
+    },
+  },
+})
 
 // run
 const start = async () => {

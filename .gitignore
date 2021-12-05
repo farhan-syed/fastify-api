@@ -1,3 +1,4 @@
 /node_modules
-data.js
 .env
+/package.lock.json
+.nyc_output
